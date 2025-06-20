@@ -1,9 +1,11 @@
+from datetime import datetime
+
 class PrintJob:
     def __init__(self, job_id, user_id, value, job_priority):
         self.job_id = job_id
         self.user_id = user_id
         self.job_priority = job_priority
-        self.waiting_time = 0
+        self.time_added = datetime.now()
         self.value = value
 
 class PrintQueue:
@@ -30,7 +32,7 @@ class PrintQueue:
         for _ in range(self.size):
             job = self.data[index]
             print(
-                f"JobID: {job.job_id}, UserID: {job.user_id}, Priority: {job.job_priority}, Value: {job.value}")
+                f"JobID: {job.job_id}, UserID: {job.user_id}, Priority: {job.job_priority}, Value: {job.value}, Time: {job.time_added}")
             index = (index + 1) % self.queue_capacity
 
     def print_job(self):
