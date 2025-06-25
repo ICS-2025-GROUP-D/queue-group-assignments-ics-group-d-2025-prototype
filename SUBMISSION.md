@@ -15,5 +15,9 @@
 
 ## Running the code
 
-Run `PrintQueueSim.py`
+Run `PrintQueueSim.py`. Enter your user ID, and the initial number of files you want to print. Afterwards, enter the path to the files.
+
+The queue will then start running. To add another file to the queue afterwards, simply type the path to it in the console & press <kbd>Enter</kbd>.
+
+Enter `exit` in the console to stop the queue.
 
